@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-scap
+  namespace: devops
+spec:
+  selector:
+    matchLabels:
+      app: docker-scap
+  template:
+    metadata:
+      labels:
+        app: docker-scap
+    spec:
+      containers:
+      - name: docker-scap
+        image: l_docker:scap
+        securityContext:
+            privileged: true
+        resources:
+          limits:
+            memory: 3Gi
+            cpu: 1000m
+          requests:
+            cpu: 10m
+            memory: 256Mi

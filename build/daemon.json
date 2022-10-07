@@ -1,0 +1,6 @@
+{
+    "insecure-registries" : [ "nexus-service.devops.svc.cluster.local:8082", "nexus-service.devops.svc.cluster.local:8083", "docker.kube.local:80", "docker.kube.local:443" ],
+    "registry-mirrors": [ "http://nexus-service.devops.svc.cluster.local:8083" ],
+    "live-restore": true,
+    "group": "dockerroot"
+}
